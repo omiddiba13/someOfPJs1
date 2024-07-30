@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stop watch</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        border: 15px solid black;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(26, 38, 48);
+      }
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .m-2 {
+        margin: 2rem;
+      }
+      button {
+        border-radius: 10px;
+        font-size: 1.5rem;
+      }
+      button:hover {
+        color: rgb(247, 247, 247);
+        background-color: brown;
+      }
+      input {
+        font-size: 2rem;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <div
+      class="m-2"
+      style="
+        border: 3px solid black;
+        border-radius: 10px;
+        padding: 1rem;
+        color: azure;
+      ">
+      <div>
+        <h1>stop watch</h1>
+      </div>
+      <div>
+        <div class="m-2">
+          <div>
+            <h1 id="time"></h1>
+            <button onclick="startTime()">start</button>
+            <button onclick="stopTime()">stop</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="m-2">
+          <h1 id="time2"></h1>
+          <button onclick="start1()">start</button>
+          <button onclick="stop1()">stop</button>
+          <button onclick="resetClock()">reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js.js"></script>
+  </body>
+</html>
