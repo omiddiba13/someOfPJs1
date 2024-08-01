@@ -71,9 +71,8 @@ async function displayQuestion() {
   const QUNumberPage = document.getElementById("QuNu");
   QUNumberPage.innerHTML = QUNumber + 1;
 }
-function Done(){
+function Done() {
   const ScourBar = document.getElementById("scourss");
-  ScourBar
-  
+  ScourBar;
 }
 displayQuestion();
