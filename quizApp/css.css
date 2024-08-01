@@ -1,0 +1,49 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(43, 43, 43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  background: white;
+  padding: 10px;
+  margin: 20px;
+}
+button {
+  font-size: 1.5rem;
+  margin: 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: gray;
+}
+button:active {
+  background-color: black;
+  color: white;
+}
+.quizst {
+  padding: 20px;
+  display: inline-block;
+  justify-items: center;
+  text-align: center;
+}
+#wtQu {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font: 1.5rem sans-serif;
+}
