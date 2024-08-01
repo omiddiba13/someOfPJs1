@@ -10,69 +10,64 @@ async function fetchJsonData() {
     console.error("Unable to fetch data:", error);
   }
 }
-//// op = option
-/// Qu = questions
+
 let whereTheOpGo = document.getElementById("sectionOP");
 let whereTheQuGo = document.getElementById("wtQu");
 let QUNumber = 0;
-var Scour = 0;
-if (Scour < 0) {
-  Scour = 0;
-}
-//// / back
+let Score = 0;
+let totalQuestions = 0;
 
-function Back() {
-  if (QUNumber >= 1) {
-    QUNumber--;
-    if (Scour < 0) {
-      Scour = 0;
-    }
-    Scour--;
-    displayQuestion();
-    console.log(Scour);
-  }
-}
-////
 async function displayQuestion() {
   const data = await fetchJsonData();
-  //data
+  if (!data) return;
+
+  totalQuestions = data.questions.length;
   const dataQuAll = data.questions[QUNumber];
-  //qudata
   const theQU = dataQuAll.question;
   whereTheQuGo.innerHTML = theQU;
 
   let theOption = whereTheOpGo;
-  theOption.innerHTML = ""; // Clear previous options
-  let answer = dataQuAll.options.forEach((option, optionIdx) => {
+  theOption.innerHTML = "";
+
+  dataQuAll.options.forEach(option => {
     const button = document.createElement("button");
     button.innerHTML = option;
     button.onclick = () => handleAnswer(option, dataQuAll.answer);
     theOption.appendChild(button);
   });
 
-  let handleAnswer = (selectedOption, correctAnswer) => {
-    if (selectedOption === correctAnswer) {
-      QUNumber++;
-      Scour++;
-      console.log(Scour);
-      displayQuestion();
-    } else {
-      if (Scour < 1) {
-        Scour = 1;
-        Scour++;
-      }
-      Scour--;
-      QUNumber++;
-      console.log(Scour);
-      displayQuestion();
-    }
-    console.log(Scour);
-  };
   const QUNumberPage = document.getElementById("QuNu");
   QUNumberPage.innerHTML = QUNumber + 1;
 }
-function Done() {
-  const ScourBar = document.getElementById("scourss");
-  ScourBar;
+
+function handleAnswer(selectedOption, correctAnswer) {
+  if (selectedOption === correctAnswer) {
+    Score++;
+  }
+  QUNumber++;
+
+  if (QUNumber < totalQuestions) {
+    displayQuestion();
+  } else {
+    displayScore();
+  }
 }
+
+function displayScore() {
+  const result = document.getElementById("result");
+  const percentage = (Score / totalQuestions) * 100;
+  result.innerHTML = `Your score: ${Score}/${totalQuestions} (${percentage.toFixed(
+    2,
+  )}%)`;
+}
+
+function Back() {
+  if (QUNumber > 0) {
+    QUNumber--;
+    displayQuestion();
+  }
+}
+
+document.getElementById("backButton").addEventListener("click", Back);
+
 displayQuestion();

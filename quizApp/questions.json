@@ -1,104 +1,48 @@
 {
   "questions": [
-    {
-      "question": "9 + 3 = ?",
-      "options": [15, 10, 12, 18],
-      "answer": 12
-    },
-    {
-      "question": "1 + 7 = ?",
-      "options": [12, 8, 6, 17],
-      "answer": 8
-    },
-    {
-      "question": "3 + 6 = ?",
-      "options": [11, 18, 9, 7],
-      "answer": 9
-    },
-    {
-      "question": "7 + 7 = ?",
-      "options": [19, 14, 21, 12],
-      "answer": 14
-    },
-    {
-      "question": "3 + 7 = ?",
-      "options": [15, 16, 7, 10],
-      "answer": 10
-    },
-    {
-      "question": "10 + 3 = ?",
-      "options": [22, 16, 10, 13],
-      "answer": 13
-    },
-    {
-      "question": "2 + 7 = ?",
-      "options": [4, 9, 14, 19],
-      "answer": 9
-    },
-    {
-      "question": "9 + 9 = ?",
-      "options": [18, 19, 15, 26],
-      "answer": 18
-    },
-    {
-      "question": "5 + 2 = ?",
-      "options": [7, 9, 4, 14],
-      "answer": 7
-    },
-    {
-      "question": "6 + 10 = ?",
-      "options": [26, 14, 16, 19],
-      "answer": 16
-    },
-    {
-      "question": "9 + 5 = ?",
-      "options": [18, 12, 21, 14],
-      "answer": 14
-    },
-    {
-      "question": "7 + 9 = ?",
-      "options": [24, 12, 18, 16],
-      "answer": 16
-    },
-    {
-      "question": "4 + 7 = ?",
-      "options": [11, 12, 8, 19],
-      "answer": 11
-    },
-    {
-      "question": "4 + 1 = ?",
-      "options": [5, 0, 13, 8],
-      "answer": 5
-    },
-    {
-      "question": "2 + 5 = ?",
-      "options": [7, 9, 6, 17],
-      "answer": 7
-    },
-    {
-      "question": "4 + 6 = ?",
-      "options": [18, 8, 15, 10],
-      "answer": 10
-    },
-    {
-      "question": "2 + 1 = ?",
-      "options": [4, 0, 11, 3],
-      "answer": 3
-    },
-    {
-      "question": "10 + 3 = ?",
-      "options": [9, 13, 22, 18],
-      "answer": 13
-    },
-    {
-      "question": "3 + 5 = ?",
-      "options": [14, 6, 8, 10],
-      "answer": 8
-    },
-    {
-      "question": "6 + 5 = ?",
-      "options": [6, 16, 19, 11],
-      "answer": 11
-    }
+    { "question": "12 - 4 = ?", "options": [8, 7, 9, 10], "answer": 8 },
+    { "question": "5 + 6 = ?", "options": [10, 12, 11, 13], "answer": 11 },
+    { "question": "9 x 3 = ?", "options": [27, 24, 30, 21], "answer": 27 },
+    { "question": "15 / 3 = ?", "options": [5, 6, 4, 7], "answer": 5 },
+    { "question": "8 + 7 = ?", "options": [15, 14, 16, 13], "answer": 15 },
+    { "question": "14 - 9 = ?", "options": [5, 6, 4, 7], "answer": 5 },
+    { "question": "7 x 2 = ?", "options": [14, 12, 16, 18], "answer": 14 },
+    { "question": "18 / 2 = ?", "options": [10, 8, 9, 7], "answer": 9 },
+    { "question": "6 + 8 = ?", "options": [13, 14, 15, 12], "answer": 14 },
+    { "question": "16 - 5 = ?", "options": [12, 11, 10, 15], "answer": 11 },
+    { "question": "5 x 5 = ?", "options": [25, 20, 15, 30], "answer": 25 },
+    { "question": "20 / 4 = ?", "options": [5, 6, 4, 7], "answer": 5 },
+    { "question": "11 + 9 = ?", "options": [20, 18, 22, 17], "answer": 20 },
+    { "question": "13 - 7 = ?", "options": [6, 5, 4, 7], "answer": 6 },
+    { "question": "8 x 3 = ?", "options": [24, 22, 26, 20], "answer": 24 },
+    { "question": "24 / 6 = ?", "options": [4, 5, 3, 6], "answer": 4 },
+    { "question": "9 + 10 = ?", "options": [18, 19, 20, 17], "answer": 19 },
+    { "question": "14 - 6 = ?", "options": [8, 9, 7, 10], "answer": 8 },
+    { "question": "7 x 4 = ?", "options": [28, 30, 24, 32], "answer": 28 },
+    { "question": "30 / 5 = ?", "options": [5, 6, 7, 8], "answer": 6 },
+    { "question": "10 + 11 = ?", "options": [21, 22, 20, 23], "answer": 21 },
+    { "question": "17 - 8 = ?", "options": [9, 10, 8, 11], "answer": 9 },
+    { "question": "6 x 5 = ?", "options": [30, 25, 28, 35], "answer": 30 },
+    { "question": "45 / 9 = ?", "options": [5, 6, 7, 8], "answer": 5 },
+    { "question": "12 + 15 = ?", "options": [27, 25, 28, 30], "answer": 27 },
+    { "question": "19 - 9 = ?", "options": [9, 10, 8, 11], "answer": 10 },
+    { "question": "5 x 6 = ?", "options": [30, 28, 32, 25], "answer": 30 },
+    { "question": "36 / 4 = ?", "options": [9, 8, 7, 10], "answer": 9 },
+    { "question": "8 + 14 = ?", "options": [21, 22, 20, 23], "answer": 22 },
+    { "question": "23 - 12 = ?", "options": [10, 11, 12, 13], "answer": 11 },
+    { "question": "7 x 7 = ?", "options": [49, 42, 56, 45], "answer": 49 },
+    { "question": "56 / 7 = ?", "options": [8, 7, 6, 9], "answer": 8 },
+    { "question": "13 + 6 = ?", "options": [19, 20, 17, 18], "answer": 19 },
+    { "question": "25 - 14 = ?", "options": [10, 11, 12, 13], "answer": 11 },
+    { "question": "9 x 8 = ?", "options": [72, 64, 81, 70], "answer": 72 },
+    { "question": "72 / 8 = ?", "options": [8, 9, 7, 10], "answer": 9 },
+    { "question": "15 + 4 = ?", "options": [19, 20, 21, 18], "answer": 19 },
+    { "question": "27 - 12 = ?", "options": [14, 15, 16, 17], "answer": 15 },
+    { "question": "6 x 4 = ?", "options": [24, 20, 28, 22], "answer": 24 },
+    { "question": "48 / 6 = ?", "options": [8, 7, 9, 10], "answer": 8 },
+    { "question": "13 + 7 = ?", "options": [19, 20, 21, 18], "answer": 20 },
+    { "question": "22 - 11 = ?", "options": [11, 10, 12, 13], "answer": 11 },
+    { "question": "5 x 9 = ?", "options": [45, 50, 55, 40], "answer": 45 },
+    { "question": "81 / 9 = ?", "options": [9, 8, 10, 7], "answer": 9 }
   ]
 }
