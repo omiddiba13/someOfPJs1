@@ -1,0 +1,127 @@
+/* Base styles for body */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #035046;
+  font-family: Arial, sans-serif;
+}
+
+/* Container styles */
+.container {
+  border: 10px solid #000;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #000;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Input styles */
+input {
+  width: calc(100% - 22px);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: #b4b3b3;
+  padding: 10px;
+  border: 2px solid #000;
+  margin-bottom: 10px;
+}
+
+/* Button styles */
+button {
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #000;
+  color: #fff;
+  margin: 5px 0;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Item list styles */
+#itemsList {
+  margin-top: 20px;
+}
+
+/* Paragraph styles */
+p {
+  color: #000;
+}
+
+/* Item container styles */
+.item-container {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Item text styles */
+.item-text {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Delete button styles */
+.delete-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
+}
+
+/* Complete button styles */
+.complete-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.complete-button:hover {
+  background-color: #45a049;
+}
+
+/* Completed item styles */
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}

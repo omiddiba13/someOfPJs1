@@ -2,65 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <style>
-      body {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 15px solid black;
-        margin: 0;
-        padding: 0;
-        background-color: rgb(3, 80, 70);
-      }
-      input {
-        border-radius: 10px;
-        font-size: 1.5rem;
-        background-color: rgb(180, 179, 179);
-      }
-      input:active {
-        border-color: none;
-      }
-      button {
-        border-radius: 10px;
-        font-size: 1rem;
-        background-color: black;
-        color: white;
-        margin: 0.25rem;
-        align-self: self-end;
-      }
-      .min {
-        border: 2px solid black;
-        height: auto;
-        border-radius: 10px;
-        padding: 10px;
-        background-color: floralwhite;
-      }
-      #Items {
-        margin-top: 2rem;
-      }
-      p {
-        color: rgb(0, 0, 0);
-      }
-    </style>
-    <title>list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>List</title>
   </head>
   <body>
-    <div class="min">
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          border-bottom: 1px solid black;
-          margin: 10px;
-        ">
-        <h1>list</h1>
-      </div>
-
-      <input type="text" placeholder="add" id="itemsInput" />
-      <button onclick="addItems()" id="myButton">add item</button>
-      <div id="Items"></div>
+    <div class="container">
+      <header>
+        <h1>List</h1>
+      </header>
+      <main>
+        <input type="text" placeholder="Add item" id="itemsInput" />
+        <button id="addButton">Add Item</button>
+        <div id="itemsList"></div>
+      </main>
     </div>
     <script src="./js.js"></script>
   </body>
