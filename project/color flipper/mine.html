@@ -1,65 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>1</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        height: max-content;
-        border: 15px solid black;
-      }
-      button {
-        border-radius: 10px;
-        font-size: 2rem;
-        padding: 10px;
-        margin: 10px;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div>
-      <h3 id="textH3" style="color: black; font-size: 4rem"></h3>
-
-      <div
-        id="buttons"
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          justify-content: space-between;
-          border: 2px solid rgb(0, 0, 0);
-          border-radius: 10px;
-          height: 10rem;
-          width: auto;
-        ">
-        <button id="red" onclick="setColor('red')">red</button
-        ><button id="green" onclick="setColor('green')">green</button>
-        <button id="blue" onclick="setColor('blue')">blue</button
-        ><button id="random" onclick="randomColor()">random</button>
-      </div>
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 15px;
-        ">
-        <div
-          style="
-            width: 15rem;
-            height: 15rem;
-            background-color: aqua;
-            border-radius: 10px;
-            border: 1px solid black;
-          "
-          id="boxColorSet"></div>
-      </div>
+    <h3 id="textH3">Hello, this is a color flipper</h3>
+    <div id="buttons">
+      <button id="red" onclick="setColor('red')">Red</button>
+      <button id="green" onclick="setColor('green')">Green</button>
+      <button id="blue" onclick="setColor('blue')">Blue</button>
+      <button id="random" onclick="randomColor()">Random</button>
     </div>
+    <div id="boxColorSet"></div>
     <script src="./mine.js"></script>
-    <script>
-      const textH3 = document.getElementById("textH3");
-      textH3.textContent = "hello this is a color flipper ";
-    </script>
   </body>
 </html>
