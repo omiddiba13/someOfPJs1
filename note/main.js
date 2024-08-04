@@ -21,8 +21,7 @@ noteContainer.addEventListener('click', function (e) {
 		e.target.parentElement.remove();
 		saveOnSystem();
 	} else if (e.target.tagName === 'P') {
-		notes = document.getElementById('boxNote');
-		notes.forEach((not) => {
+		note.forEach((not) => {
 			not.onkeyup = function () {
 				saveOnSystem();
 			};
