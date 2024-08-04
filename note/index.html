@@ -3,15 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>note</title>
-		<link rel="stylesheet" href="css.css" />
+		<title>Note App</title>
+		<link rel="stylesheet" href="./css.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+			integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8k3U4Yf3B6dyYXuw5VR4hB8t24X8F0yY37IHP"
+			crossorigin="anonymous" />
 	</head>
 	<body>
-		<div>
-			<div><h1>Note</h1></div>
-			<div><button id="btn">create note</button></div>
-			<div id="noteContainer"></div>
+		<div class="container">
+			<div id="noteContainer" class="note-container"></div>
+			<button id="btn" class="create-btn">Create Note</button>
 		</div>
+
 		<script src="./main.js"></script>
+		<script
+			src="https://kit.fontawesome.com/a052ba504f.js"
+			crossorigin="anonymous"></script>
 	</body>
 </html>
