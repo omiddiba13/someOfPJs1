@@ -1,61 +1,87 @@
-/* css.css */
-
-body {
-	font-family: Arial, sans-serif;
-	text-align: center;
+/* Reset some default styles */
+body,
+h2,
+h3,
+input,
+button {
 	margin: 0;
-	padding: 20px;
-	background-color: #f0f0f0;
-}
-
-.container {
-	margin: 20px auto;
-	width: 80%;
-	max-width: 400px;
-	background-color: #fff;
-	border: 1px solid #ccc;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-	margin-bottom: 20px;
-	color: #333;
-}
-
-input[type='date'] {
-	width: 100%;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	margin-bottom: 20px;
+	padding: 0;
 	box-sizing: border-box;
 }
 
-hr {
-	margin: 20px 0;
-	border: none;
-	border-top: 1px solid #ccc;
+/* Basic styling for the body */
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: #f4f4f4;
+	padding: 20px;
 }
 
+/* Container styling */
+div.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h2 {
+	font-size: 2em;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-size: 1.2em;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+/* Styling for inputs and buttons */
+input,
 button {
-	background-color: #4caf50;
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+/* Specifically target the Persian Datepicker input */
+#datepicker {
+	padding: 10px; /* Ensure padding is sufficient to avoid text overflow */
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+/* Button styling */
+button {
+	background-color: #007bff;
 	color: white;
-	padding: 10px 20px;
 	border: none;
-	border-radius: 5px;
 	cursor: pointer;
-	font-size: 16px;
-	transition: background-color 0.3s ease;
 }
 
 button:hover {
-	background-color: #45a049;
+	background-color: #0056b3;
 }
 
-#result {
-	margin-top: 20px;
-	font-size: 18px;
-	color: #555;
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1em;
+	}
+
+	input,
+	button {
+		padding: 8px;
+	}
 }

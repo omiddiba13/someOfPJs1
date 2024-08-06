@@ -3,46 +3,87 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>calculator</title>
+		<title>Age Calculator</title>
+		<link rel="stylesheet" href="./css.css" />
 		<link
 			rel="stylesheet"
 			href="./persian-datepicker/dist/css/persian-datepicker.css" />
-		<link rel="stylesheet" href="./css.css" />
-		<link rel="stylesheet" href="./persian-datepicker.css" />
 		<script src="./jquery/dist/jquery.js"></script>
-		<script src="./persian-date/dist/persian-date.js"></script>
-		<script src="./persian-datepicker.js"></script>
+		<script src="./persian-datepicker/dist/js/persian-datepicker.js"></script>
 	</head>
 	<body>
 		<div>
 			<div>
-				<h2>age calculator</h2>
+				<h2>Age Calculator</h2>
 				<h3 id="result"></h3>
 			</div>
 			<div>
-				<input type="text" class="example1" />
-				<button onclick="calculatorAgeFA()"></button>
+				<input id="datepicker" placeholder="Select your birthdate" />
 				<hr />
 				<input type="date" id="date" />
 				<hr />
-				<button onclick="calculatorAge()">calculator</button>
+				<button onclick="calculatorAge()">Calculator</button>
 			</div>
 		</div>
+
 		<script src="./js.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function () {
-				$('.example1').pDatepicker();
+				$('#datepicker').persianDatepicker({
+					inline: false,
+					altField: '#datepicker',
+					altFormat: 'YYYY/MM/DD',
+					calendar: {
+						persian: {
+							locale: 'en',
+						},
+					},
+					timePicker: {
+						enabled: false,
+					},
+					onSelect: function (unix) {
+						calculateAge(unix);
+					},
+					onClose: function () {
+						var unix = $('#datepicker').persianDatepicker('getDate');
+						if (unix) {
+							calculateAge(unix);
+						}
+					},
+				});
+
+				// Support for keyboard input
+				$('#datepicker').on('change', function () {
+					var unix = $('#datepicker').persianDatepicker('getDate');
+					if (unix) {
+						calculateAge(unix);
+					}
+				});
 			});
-		</script>
-		<script src="./persian-date/dist/persian-date.js"></script>
-		<script type="text/javascript">
-			let dateFA = new persianDate().format();
-			persianDate.toLocale('en');
-			persianDate.toCalendar('gregorian');
-			function calculatorAgeFA() {
-				let FAB = document.getElementsByClassName('.example1');
-				console.log(FAB);
+
+			function calculateAge(unix) {
+				var selectedDate = new persianDate(unix)
+					.toCalendar('gregorian')
+					.toDate();
+				var currentDate = new Date();
+				var age = currentDate.getFullYear() - selectedDate.getFullYear();
+				var month = currentDate.getMonth() - selectedDate.getMonth();
+				if (
+					month < 0 ||
+					(month === 0 && currentDate.getDate() < selectedDate.getDate())
+				) {
+					age--;
+				}
+				$('#result').text('Your age is: ' + age + ' years old');
+				if (age >= 18) {
+					alert('you can use a site or continue');
+				} else {
+					alert('nop');
+				}
 			}
 		</script>
+		<script
+			src="./persian-date/dist/persian-date.js"
+			type="text/javascript"></script>
 	</body>
 </html>
