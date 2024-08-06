@@ -4,7 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>calculator</title>
+		<link
+			rel="stylesheet"
+			href="./persian-datepicker/dist/css/persian-datepicker.css" />
 		<link rel="stylesheet" href="./css.css" />
+		<link rel="stylesheet" href="./persian-datepicker.css" />
+		<script src="./jquery/dist/jquery.js"></script>
+		<script src="./persian-date/dist/persian-date.js"></script>
+		<script src="./persian-datepicker.js"></script>
 	</head>
 	<body>
 		<div>
@@ -13,11 +20,29 @@
 				<h3 id="result"></h3>
 			</div>
 			<div>
+				<input type="text" class="example1" />
+				<button onclick="calculatorAgeFA()"></button>
+				<hr />
 				<input type="date" id="date" />
 				<hr />
 				<button onclick="calculatorAge()">calculator</button>
 			</div>
 		</div>
 		<script src="./js.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('.example1').pDatepicker();
+			});
+		</script>
+		<script src="./persian-date/dist/persian-date.js"></script>
+		<script type="text/javascript">
+			let dateFA = new persianDate().format();
+			persianDate.toLocale('en');
+			persianDate.toCalendar('gregorian');
+			function calculatorAgeFA() {
+				let FAB = document.getElementsByClassName('.example1');
+				console.log(FAB);
+			}
+		</script>
 	</body>
 </html>
